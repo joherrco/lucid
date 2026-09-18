@@ -1,0 +1,1 @@
+window.LUCID_ASSETS = {};
