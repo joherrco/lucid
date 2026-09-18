@@ -1,0 +1,13 @@
+{
+  "name": "LUCID",
+  "short_name": "LUCID",
+  "description": "A lucid dream you can walk. Design the world. Save it. Return.",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0e1218",
+  "theme_color": "#0e1218",
+  "icons": [
+    { "src": "assets/sprites/icon.jpg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any" }
+  ]
+}
