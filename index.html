@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0e1218" />
+  <title>LUCID</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/sprites/icon.jpg" />
+  <link rel="apple-touch-icon" href="assets/sprites/icon.jpg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Share+Tech+Mono&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="view"></canvas>
+    <div id="grade"></div>
+    <div id="vignette"></div>
+
+    <div id="hud">
+      <div class="hud-label">LUCID</div>
+      <div class="status" id="status">WALK THE VOID</div>
+      <div class="hud-hint" id="hint">BACKBONE / STICKS TO WALK · R1 OR SIDE TAB TO DESIGN</div>
+    </div>
+
+    <button id="design-tab" type="button">DESIGN</button>
+
+    <div class="stick" id="stick-move"><div class="knob" id="knob-move"></div></div>
+    <div class="stick" id="stick-look"><div class="knob" id="knob-look"></div></div>
+
+    <aside class="panel" id="design-panel">
+      <h2>DESIGN DREAM</h2>
+      <p class="sub">Describe a person, vehicle, or thing. xAI weaves it into the void in front of you. Change the sky. Save the dream and return later.</p>
+      <textarea id="prompt" maxlength="180" placeholder="a yellow taxi in the fog…"></textarea>
+      <div class="row" id="chips">
+        <button class="chip" data-fill="a stranger in a long raincoat">PERSON</button>
+        <button class="chip" data-fill="a yellow taxi cab">VEHICLE</button>
+        <button class="chip" data-fill="a concrete staircase climbing into fog">THING</button>
+        <button class="chip" data-fill="a street lamp with a warm light">LIGHT</button>
+        <button class="chip" data-fill="turn the sky into a red dusk">SKY</button>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="btn-weave">WEAVE</button>
+        <button class="btn ghost" id="btn-clear">CLEAR VOID</button>
+      </div>
+      <div class="row">
+        <input type="text" id="dream-name" maxlength="32" placeholder="name this dream" />
+        <button class="btn primary" id="btn-save">SAVE</button>
+      </div>
+      <p class="sub" style="margin-top:8px">SAVED DREAMS</p>
+      <div class="dream-list" id="dream-list"></div>
+      <div class="row">
+        <button class="btn ghost" id="btn-close">CLOSE</button>
+      </div>
+    </aside>
+
+    <div id="weave"><div class="box">xAI · WEAVING<span class="dots" id="weave-dots">…</span><div id="weave-line" style="margin-top:8px;color:#9aa3b0;letter-spacing:0.08em;font-size:11px"></div></div></div>
+
+    <div id="title-screen">
+      <div class="inner">
+        <h1>LUCID</h1>
+        <p>YOU ARE ALREADY ASLEEP</p>
+        <button class="btn primary start" id="btn-start">PRESS START</button>
+        <p style="margin-top:22px;font-size:10px;letter-spacing:0.16em">LANDSCAPE · BACKBONE READY · ADD TO HOME SCREEN</p>
+      </div>
+    </div>
+
+    <div id="pause">
+      <div class="card">
+        <h2 style="font-family:Orbitron,sans-serif;letter-spacing:0.32em;font-weight:400;margin-bottom:12px">PAUSE</h2>
+        <p class="sub">The dream holds. Walk when you are ready.</p>
+        <div class="row">
+          <button class="btn primary" id="btn-resume">RESUME</button>
+          <button class="btn ghost" id="btn-to-title">WAKE</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="rotate">
+      <div>TURN THE PHONE</div>
+      <div style="color:#9aa3b0;font-size:12px">LUCID IS PLAYED ON ITS SIDE · BACKBONE</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
